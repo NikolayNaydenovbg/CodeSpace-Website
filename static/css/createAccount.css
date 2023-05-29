@@ -171,7 +171,7 @@ li{
     cursor: pointer;
 }
 .footer {
-    background-image: url("images/4584070-black-gray-leather-texture-dark-simple.jpg");
+    background-image: url("../images/4584070-black-gray-leather-texture-dark-simple.jpg");
     position: fixed;
     top:88%;
     bottom: 0px;
@@ -236,6 +236,17 @@ li{
     border-radius: 8px;
     box-shadow: 15px 15px 25px rgba(0,0,0,0.25);
 }
+
+.btnn-submit{
+    margin: 10px auto;
+    height: 35px;
+    width: 50%;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 15px 15px 25px rgba(0,0,0,0.25);
+}
+
 .btnn:hover{
     background-color: white;
     color: black;

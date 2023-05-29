@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/woman.css">
+    <link rel="stylesheet" href="../static/css/createAccount.css">
+    <script src="../static/js/main.js" defer></script>
+
+</head>
+<body>
+<header>
+    <div class="header"><a class="header" href="homepage.html">Michal Korse</a></div>
+    <div class="right-section">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
+                data-bs-auto-close="outside">
+            Sign in
+        </button>
+        <form class="dropdown-menu p-4">
+            <div class="mb-3">
+                <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                    <label class="form-check-label" for="dropdownCheck2">
+                        Remember me
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+    </div>
+</header>
+
+<nav id="dropDown" class="navigation">
+    <ul class="nav-menu">
+        <div class="dropdown">
+            <a href="mens.html">
+                <button class="dropbtn">Men</button>
+            </a>
+        </div>
+        <div class="dropdown">
+            <a href="women.html">
+                <button class="dropbtn">Woman</button>
+            </a>
+        </div>
+        <div class="dropdown">
+            <a href="#">
+                <button class="dropbtn">Michal Korse Collection</button>
+            </a>
+            <div class="dropdown-content">
+                <a href="shoes.html">Shoe</a>
+                <a href="bags.html">Totes</a>
+                <a href="smart-watches.html"><span>Smart Watches</span></a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="clothing.html">
+                <button class="dropbtn">Clothing</button>
+            </a>
+            <div class="dropdown-content">
+                <a href="mens-jackets.html">Mens Jackets & Outerwear</a>
+                <a href="#">Watches</a>
+                <a href="#">Watches</a>
+            </div>
+        </div>
+    </ul>
+
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<div class="create-account d-flex flex-column">
+    <h1 class="text-center">Create Account</h1>
+
+    {% if message %}
+        <div class="alert alert-warning" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+    <form class=" d-flex flex-column" action="/create-account" method="post">
+         <div class="name">
+        <input class="first-name" type="text" name="username" placeholder="Username *" id="username">
+    </div>
+    <div class="last-name">
+        <input class="second-name" type="email" name="email" placeholder="Email Addres *" id="email">
+    </div>
+    <div class="email-1">
+        <input class="email" type="password" name="password" placeholder="Password *" id="password">
+    </div>
+    <div class="pass">
+        <input class="password" type="password" name="password_confirmation" placeholder="Confirm Password *"
+               id="confirm">
+    </div>
+    <button class="btnn-submit" type="submit">Create Account</button>
+    </form>
+
+
+</div>
+
+
+<div class="main-footer">
+    <div class="col-1">
+        <h3 class="text-5">Sign in for more exclusive offers</h3>
+        <label>
+            <input class="input-footer" type="text" name="" id="Email Address" placeholder="Email Address">
+            <button class="btn-footer" type="submit">SIGN IN</button>
+        </label>
+        <div class="media-links">
+            <a href="https://www.facebook.com/MichaelKors/"><img class="media" src="../static/images/1384005.png"
+                                                                 alt="facebook"></a>
+            <a href="https://www.facebook.com/MichaelKors/"><img class="media-2" src="../static/images/25347.png"
+                                                                 alt="facebook"></a>
+            <a href="https://www.facebook.com/MichaelKors/"><img class="media-4"
+                                                                 src="../static/images/Circled_Instagram_svg-512.webp"
+                                                                 alt="facebook"></a>
+        </div>
+    </div>
+    <div class="col-2">
+        <h3 class="text-5">Customer service</h3>
+        <a class="a-tags" href="">About</a>
+        <a class="a-tags" href="">Service</a>
+        <a class="a-tags" href="">FAQ</a>
+        <a class="a-tags" href="">Contact Us</a>
+    </div>
+    <div class="col-3">
+        <h3 class="text-5">My Account</h3>
+        <a class="a-tags" href="">Create Account</a>
+        <a class="a-tags" href="">Accounts</a>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
