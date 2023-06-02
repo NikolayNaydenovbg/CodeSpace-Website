@@ -4,7 +4,7 @@ from flask import Flask, make_response, request, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/homepage')
 def homepage():
     return render_template('homepage.html')
 
@@ -19,7 +19,7 @@ def men():
     return render_template('mens.html')
 
 
-@app.route('/women')
+@app.route('/woman')
 def women():
     return render_template('women.html')
 

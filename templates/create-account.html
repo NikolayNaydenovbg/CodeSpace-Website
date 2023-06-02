@@ -69,8 +69,6 @@
             </a>
             <div class="dropdown-content">
                 <a href="mens-jackets.html">Mens Jackets & Outerwear</a>
-                <a href="#">Watches</a>
-                <a href="#">Watches</a>
             </div>
         </div>
     </ul>
@@ -82,14 +80,16 @@
     </div>
 </nav>
 
-<div class="create-account d-flex flex-column">
-    <h1 class="text-center">Create Account</h1>
-
     {% if message %}
         <div class="alert alert-warning" role="alert">
             {{ message }}
         </div>
     {% endif %}
+
+<div class="create-account d-flex flex-column">
+    <h1 class="text-center">Create Account</h1>
+
+
     <form class=" d-flex flex-column" action="/create-account" method="post">
          <div class="name">
         <input class="first-name" type="text" name="username" placeholder="Username *" id="username">

@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/woman.css">
-    <link rel="stylesheet" href="../static/css/createAccount.css">
+    <link rel="stylesheet" href="../static/css/sign-in.css">
     <script src="../static/js/main.js" defer></script>
 
 </head>
@@ -20,7 +20,7 @@
     <ul class="nav-menu">
         <div class="dropdown">
             <a href="mens.html">
-                <button class="dropbtn">Men</button>
+                <button  class="dropbtn">Men</button>
             </a>
         </div>
         <div class="dropdown">
@@ -56,14 +56,14 @@
         <span class="bar"></span>
     </div>
 </nav>
-
-<div class="create-account d-flex flex-column">
-    <h1>Sign-In</h1>
-    {% if message %}
+     {% if message %}
         <div class="alert alert-warning" role="alert">
             {{ message }}
         </div>
     {% endif %}
+<div class="sign-in d-flex flex-column">
+    <h1>Sign-In</h1>
+
         <form class="p-4" action="/sign-in" method="post">
             <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
